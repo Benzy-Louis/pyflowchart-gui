@@ -1,0 +1,18 @@
+<form method="POST">
+{{ form.hidden_tag() }}
+
+{{ form.first_name.label }}
+{{ form.first_name(size=32) }}
+{{form.errors }}
+{% if form.first_name.errors %}
+<div style="color: red">{{form.first_name.errors[0]}}</div>
+{% endif %}
+<br>
+{{ form.last_name.label }}
+{{ form.last_name(size=32) }}<br>
+
+{{ form.age.label }}
+{{ form.age(size=240) }}<br>
+
+{{ form.submit() }}
+</form>

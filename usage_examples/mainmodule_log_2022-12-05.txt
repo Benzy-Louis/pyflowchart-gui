@@ -1,0 +1,4 @@
+2022-12-05 13:50:29,788 logging_test INFO      Hello from main module
+2022-12-05 13:50:29,788 logging_test INFO      From test_logging()
+2022-12-05 13:50:29,788 logging_test_submodule INFO      Hello from run() of submodule
+2022-12-05 13:50:29,789 logging_test_submodule INFO      From test_logging_submodule()

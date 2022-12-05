@@ -1,0 +1,17 @@
+{% extends "main-page.html" %}
+
+{% block title %}articles{% endblock %}
+
+{% block body %}
+    {%  for article in articles  %}
+        <h1>title {{ article['title'] }}</h1>
+        <h2>author {{ article['author'] }}</h2>
+        <h2>content {{ article['content'] }}</h2>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endfor %}
+
+{% endblock %}
