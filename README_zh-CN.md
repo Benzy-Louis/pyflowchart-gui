@@ -346,7 +346,7 @@ Sadly, I am too busy (pronounced as `[ˈlеizi]`——lazy) to code these ideas.
 - [A blog about this project](https://clownote.github.io/2020/10/24/blog/PyFlowchart/)
 
 ## License
-
+Copyright ©️ 2022 Ruben Louis. All rights reserved.
 Copyright ©️ 2020-2022 CDFMLR. All rights reserved.
 
 Licensed under the MIT License.

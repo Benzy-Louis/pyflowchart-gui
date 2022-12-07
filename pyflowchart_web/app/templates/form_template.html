@@ -1,0 +1,34 @@
+<br />
+<form method="POST" enctype=multipart/form-data>
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.file.label }}
+        {{ form.file }}
+    </div>
+    <!-- <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"> -->
+    {{ form.field.label }}
+    {{ form.field }}
+    <br />
+
+    {{ form.submit() }}
+</form>
+<br />
+{% if content %}
+<div class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-6">
+            <textarea class="form-control" rows="3" readonly>{{content}}</textarea>
+        </div>
+    </div>
+</div>
+{% endif %}
+<br />
+{% if code_flowchart %}
+<div class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-6">
+            <textarea class="form-control" rows="3" readonly>{{code_flowchart}}</textarea>
+        </div>
+    </div>
+</div>
+{% endif %}
