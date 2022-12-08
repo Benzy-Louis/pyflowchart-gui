@@ -30,23 +30,31 @@ def allowed_file(filename):
 def index():
     """index route"""
     form = Form()
-    if form.validate_on_submit():
-        file = flask.request.files['file']
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file_path = f"{UPLOAD_FOLDER}{secure_filename(filename)}"
-            file.save(file_path)
+    # if form.validate_on_submit():
+    #     file = flask.request.files['file']
+    #     if file and allowed_file(file.filename):
+    #         filename = secure_filename(file.filename)
+    #         file_path = f"{UPLOAD_FOLDER}{secure_filename(filename)}"
+    #         file.save(file_path)
 
-            with open(file_path, "r", encoding='utf-8') as f:
-                content = f.read()
-            flow_chart = Flowchart.from_code(content, field='')
-            code_flowchart = flow_chart.flowchart()
-            return flask.render_template("index.html",
-                                         title="pyflowchart GUI", form=form,
-                                         content=content,
-                                         code_flowchart=code_flowchart)
-        # return flask.render_template("index.html",
-        # title = file, form = form)
-        # Do something with the data
+    #         # content_stream = file.stream
+    #         # Open the file for writing.
+    #         with open(content_stream.name, 'r') as f:
+    #             # where `stuff` is, y'know... stuff to write (a string)
+    #             content = content_stream.read()
+
+    #         # with open(file_path, "r", encoding='utf-8') as f:
+    #         #     content = f.read()
+    #         # flow_chart = Flowchart.from_code(content, field='')
+    #         # code_flowchart = flow_chart.flowchart()
+    #         code_flowchart = ''
+    #         return flask.render_template("index.html",
+    #                                      title="pyflowchart GUI", form=form,
+    #                                      content=content,
+    #                                      code_flowchart=code_flowchart)
+    #         # return flask.render_template("example_flowchart_js.html",
+    #         #                              #  title="pyflowchart GUI", form=form,
+    #         #                              code=content,
+    #         #                              code_flowchart=code_flowchart)
     return flask.render_template("index.html",
                                  title="pyflowchart GUI", form=form)
