@@ -9,6 +9,4 @@ def init_app():
     app.config['SECRET_KEY'] = 'secret stuff'
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
     app.register_blueprint(controllers, url_prefix='/')
-    # with app.app_context():
-    #     user_code.code = 'test'
     return app
