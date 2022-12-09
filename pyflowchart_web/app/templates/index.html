@@ -1,4 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 {% include "form_template.html" %}
+{% include "flowchart_generation.html" %}
+{% endblock %}
+{% block js_includes %}
+{{ super() }}
 {% endblock %}

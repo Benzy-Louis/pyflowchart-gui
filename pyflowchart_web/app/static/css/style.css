@@ -1,4 +1,44 @@
 body {
     /* background-image: url("../img/background.jpg"); */
     background-color: #ec4848;
-   }
+    overflow: scroll;
+}
+
+.end-element {
+    fill: #FFCCFF;
+}
+
+pre {
+    height: auto;
+    max-height: 10em;
+    max-width: 70em;
+    overflow: auto;
+    background-color: #eeeeee;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
+
+pre.language-python {
+    max-height: 10em;
+    max-width: 70em;
+}
+
+label {
+    padding-bottom: 0.2em;
+    font-size: calc(1.3rem + .6vw);
+    font-weight: 500;
+}
+
+a.navbar-brand {
+    font-size: calc(1.3rem + .6vw);
+    /* font-weight: 500; */
+}
+
+.form-control {
+    font-size: calc(1.3rem + .3vw);
+}
+
+input#submit.btn {
+    --bs-btn-font-size: calc(1.3rem + .3vw);
+}

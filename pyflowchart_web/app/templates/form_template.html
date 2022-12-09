@@ -1,34 +1,41 @@
+{% if form_file%}
 <br />
-<form method="POST" enctype=multipart/form-data>
-    {{ form.hidden_tag() }}
-    <div class="mb-3">
-        {{ form.file.label }}
-        {{ form.file }}
-    </div>
-    <!-- <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"> -->
-    {{ form.field.label }}
-    {{ form.field }}
-    <br />
+<form method="POST" enctype=multipart/form-data class="text-center">
 
-    {{ form.submit() }}
+    <div class="mb-3">
+        {{ form_file.hidden_tag() }}
+        {{ form_file.file.label }}
+        {{ form_file.file }}
+    </div>
+    <div class="text-center">
+        {{ form_file.hidden_tag() }}
+        {{ form_file.submit() }}
+    </div>
 </form>
 <br />
-{% if content %}
-<div class="form-horizontal">
-    <div class="form-group">
-        <div class="col-md-6">
-            <textarea class="form-control" rows="3" readonly>{{content}}</textarea>
-        </div>
-    </div>
-</div>
 {% endif %}
-<br />
-{% if code_flowchart %}
-<div class="form-horizontal">
-    <div class="form-group">
-        <div class="col-md-6">
-            <textarea class="form-control" rows="3" readonly>{{code_flowchart}}</textarea>
-        </div>
+
+{% if content %}
+<div class="row">
+    <h3 class="text-center">Python Code</h3>
+    <div class="col-sm-auto mx-auto">
+        <pre><code class="language-python">{{content}}</code></pre>
     </div>
 </div>
+<br />
+{% endif %}
+
+{% if form_field %}
+<br />
+<form method="POST" class="text-center">
+
+    {{ form_field.hidden_tag() }}
+    {{ form_field.field.label }}
+    {{ form_field.field }}
+    <br />
+    <div class="text-center">
+        {{ form_field.submit() }}
+    </div>
+</form>
+<br />
 {% endif %}

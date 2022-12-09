@@ -1,0 +1,16 @@
+{% if code_flowchart %}
+<div class="row">
+    <h3 class="text-center">Python Code parse to Flow DSL syntax</h3>
+
+    <div class="col-sm-auto mx-auto">
+        <pre><code class="language-python" id="code" >{{code_flowchart}}</code></pre>
+    </div>
+</div>
+<br />
+<div class="row">
+    <h3 class="text-center">Flow DSL syntax rendered with flowchart.js</h3>
+    <div id="canvas" class="text-center">
+    </div>
+</div>
+
+{% endif %}
